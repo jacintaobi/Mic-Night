@@ -18,8 +18,7 @@
 
     <header>
       <h1>Mic Night</h1>
-      <img src="" alt="maybe header/svg">
-    </header>
+        </header>
 
     <nav>
       <ul>
@@ -30,8 +29,9 @@
        <!-- A Search form is another commmon non-linear way to navigate through a website. -->
 
        <form>
-         <input type="search" name="q" placeholder="Search query">
+         <input type="search" id="myInput" onkeyup="myFunction()" placeholder="Search query">
          <input type="submit" value="Go!">
+
        </form>
      </nav>
 
@@ -43,7 +43,7 @@
         <h2>This month's Mic Night Theme is:</h2>
 
         <!-- have a border around this paragraph -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        <p>Mic Night theme and infor for hopefully the month of October will go here once more information is known.</p>
 
         <h3>Subsection</h3>
 
@@ -72,6 +72,8 @@
         <!--Put a top border here -->
         <h4>Stay tuned for more!</h4>
 
+      <img src="" alt="MiC Night svg will go here once designed, it will take up all this space">
+
       </aside>
 
     </main>
@@ -82,6 +84,28 @@
       <p>For more information email ... sponsor. <br>
         ©Copyright 2020 by MNBOS. <!-- Mic Night Board of Students -->All rights reversed.</p>
     </footer>
+
+    <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
 
   </body>
 </html>
