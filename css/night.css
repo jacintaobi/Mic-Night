@@ -1,3 +1,33 @@
+html {
+  background-image: linear-gradient(purple, rgb(0, 255, 255), purple);
+  margin: 0;
+  padding: 0;
+}
+
 title {
   font-size: 30em
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+nav li {
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
 }
