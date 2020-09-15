@@ -1,10 +1,17 @@
 html {
-  background-image: linear-gradient(purple, rgb(0, 255, 255), purple);
+  background-color: #ffe4c4;
   margin: 0;
   padding: 0;
 }
+
+header {
+  background-color: DarkRed;
+  border: white solid 6px;
+}
+
 nav {
   display: flex;
+  background-color: white;
 }
 
 nav ul {
@@ -14,8 +21,7 @@ nav ul {
   display: flex;
 }
 nav li {
-  border-top: 2px black solid;
-  border-bottom: 2px black solid;
+
   display: inline;
   text-align: center;
   flex: 1;
@@ -31,8 +37,8 @@ nav form {
   display: flex;
   align-items: center;
   height: 100%;
+  margin-right: 6px;
   padding-bottom: 0;
-  border-bottom: 2px black solid;
   padding-top: 1rem;
 }
 
@@ -40,6 +46,7 @@ input {
   font-size: 1rem;
   height: 20px;
 }
+
 input[type="search"] {
   flex: 3;
 }
@@ -48,29 +55,30 @@ input[type="submit"] {
   flex: 1;
   margin-left: 1rem;
   border: 0;
+  background-color: grey;
 }
 
-a:visited{
-  color: green;
+a:visited {
+  color: black;
 }
 
 a:focus{
-  color: rgb(0, 51, 0);
+  color: black;
 }
 
 a:hover{
-  color: white;
+  color: black;
   text-decoration: underline;
 }
 
 a:active{
-  color:rgb(0, 255, 255)
+  color:rgb(0, 0, 255)
 }
 
 h1 {
 font-size: 100px;
 text-align: center;
-font-family: 'Tangerine', cursive;
+font-family: 'Montserrat';
 margin: 20px;
 }
 
@@ -80,9 +88,14 @@ main {
 
 article {
   flex: 3;
+  border: white solid 6px;
+padding: 10px;
+font-family: 'Syne';
+
 }
 
 aside {
+  background-color: DarkRed;
   border: 2px solid black;
 padding-left: 5px;
 padding-right: 5px;
@@ -98,10 +111,11 @@ aside a {
 }
 
 footer {
-  margin-top: 20px;
+  margin-top: auto;
   padding: 20px;
   flex: 5;
-  border: solid black 2px;
+  border: solid white 2px;
+  background-color: white;
 }
 
 @media screen and (max-width: 800px) {
